@@ -1,0 +1,109 @@
+Programación y manejo de aplicaciones distribuidas implementado por el sistema operativo. 
+
+ 
+
+Introducción.  
+
+Un sistema operativo distribuido es la unión lógica de un grupo de sistemas operativos sobre una colección de nodos computacionales independientes, conectados en red, comunicándose y físicamente separados. Cada nodo contiene de forma individual un subconjunto específico de los programas que componen el sistema operativo distribuido. Cada subconjunto es una combinación de dos proveedores de servicios distintos. El primero es un núcleo ubicuo mínimo o micro núcleo, que controla el hardware del nodo. El segundo es una colección de componente de administración del sistema de alto nivel que coordinan las actividades individuales y colaborativas del nodo. Estos componentes son una abstracción de las funciones del micro núcleo y dan soporte a las aplicaciones de usuario.  
+
+Antecedentes. 
+
+Un sistema operativo distribuido provee las funcionalidades esenciales requeridas por un sistema distribuido, agregando atributos y configuraciones para dar soporte a los requerimientos adicionales, tales como aumento de escala y disponibilidad. Desde el punto de vista del usuario el SO funciona de forma similar a un Sistema Operativo monolítico de un solo nodo. O sea que, aunque está compuesto por múltiples nodos, para los usuarios y aplicaciones luce como un solo nodo. 
+
+Desarrollo. 
+
+El micro núcleo y las componentes de administración trabajan en conjunto. Ambos dan soporte al objetivo del sistema el cual es integrar múltiples recursos y capacidad de procesamiento en un sistema eficiente y estable. Esta integración sin fisuras de nodos individuales en un sistema global es conocido como transparencia, o sistema de imagen única; haciendo referencias a la ilusión que se le brinda a los usuarios de que el sistema global luce como una entidad computacional única. 
+
+Separando las funcionalidades mínimas a nivel de sistema de los servicios modulares adicionales a nivel de usuario provee “una separación de mecanismos y políticas”. Mecanismos y políticas pueden ser interpretados de la siguiente manera “cómo algo se hace” contra “por qué algo se hace” respectivamente. Esta separación incrementa la escalabilidad y la flexibilidad. 
+
+ 
+
+ 
+
+APLICACIONES MONOLITICAS 
+
+Son aquellas en las que el software se estructura en grupos funcionales muy acoplados, involucrando los aspectos referidos a la presentación, procesamiento y almacenamiento de la información.  
+
+ 
+
+APLICACIONES MONOLITICAS 
+
+Son aquellas en las que el software se estructura en grupos funcionales muy acoplados, involucrando los aspectos referidos a la presentación, procesamiento y almacenamiento de la información.  
+
+En una aplicación monolítica las tres partes forman un todo y se ejecutan en la misma máquina. 
+
+Datos 
+
+Lógica de negocio 
+
+Interface de usuario  
+
+Ventajas: 
+
+Funcionan más rápido. 
+
+Fácil de desarrollar. 
+
+Difícil de mantener, poco escalable y que 
+
+Precisa de cierta potencia de proceso. 
+
+Requieren más y mejor HW en las estaciones de trabajo 
+
+Desventajas 
+
+Son infinitamente más lentos en el procesamiento de peticiones sencillas 
+
+Ocupan mayor ancho de banda, provocando congestionamiento en la Red Local 
+
+Requieren habilitar el acceso real a la carpeta de datos para todos los usuarios de la aplicación 
+
+Su actualización es más costosa 
+
+No permiten el acceso en línea desde fuera de la Red Local ó requieren de implementaciones de soluciones de conectividad muy costosas 
+
+  
+
+APLICACIONES CLIENTE SERVIDOR 
+
+En las aplicaciones cliente-servidor que llamaremos “tradicionales” sólo encontramos dos procesos principales. Uno de ellos se encarga fundamentalmente de proporcionar los datos que se le solicitan y de procesar los datos que se le envían. Llamamos servidor tanto al proceso que realiza estas funciones como al equipo en el que dicho proceso está alojado. El otro proceso, al que llamamos cliente, se ejecuta en el equipo del usuario que maneja la aplicación, y sus funciones principales son solicitar datos al servidor, presentarlos al usuario para que este realice cierto trabajo con ellos y enviar los cambios al servidor para su reproceso si es necesario. 
+
+ 
+
+APLICACIONES EN N-CAPAS 
+
+En una aplicación distribuida en n-capas los diferentes procesos están distribuidos en diferentes capas no sólo lógicas, sino también físicas. Los procesos se ejecutan en diferentes equipos, que pueden incluso residir en plataformas o sistemas operativos completamente distintos. Cada equipo posee una configuración distinta y está optimizado para realizar el papel que le ha sido asignado dentro de la estructura de la aplicación, de modo que tanto los recursos como la eficiencia global del sistema se optimicen. 
+
+1. Aplicaciones de una Capa: Las capas dentro de una arquitectura son nada más que un conjunto de servicios especializados que pueden ser accesibles por múltiples clientes y fácilmente reutilizables. 
+
+2.-Aplicaciones de dos capas: Se caracterizan por tener 2 asociaciones lógicas, que prestan servicios y que a la final son capas. En la primera capa se incluye a la presentación (Interface gráfica) y a la lógica de negocios, toda la lógica la escribimos en las formas (en el onClick del botón, por ejemplo), y accedemos a un servicio de datos para la gestión de los mismos, por lo general a un servidor de Base de Datos 
+
+3.-Aplicaciones de 3 Capas: Una aplicación de tres capas es una aplicación cuya funcionalidad puede ser segmentada en tres niveles lógicos (capas): 
+
+Los servicios de presentación. 
+
+Los servicios de negocios (Lógica de Negocios) 
+
+Los servicios de datos. 
+
+ 
+
+ARQUITECTURA DE LAS APLICACIONES DISTRIBUIDAS  
+
+Atendiendo al papel que los distintos elementos juegan dentro de la aplicación, distinguimos con claridad tres grupos lógicos en los que podemos agrupar elementos según su funcionalidad: 
+
+La capa de servidor incluye aquellos elementos que se encargan de recibir las peticiones de datos o de acceso a servicios básicos del sistema y de suministrar a otros elementos la información solicitada. 
+
+La capa de negocios encapsula las reglas de acceso a datos y la gestión de procesos internos de la aplicación. 
+
+La capa de presentación se encarga de la lógica necesaria para interactuar con el usuario de la aplicación. 
+
+Bibliografías. 
+
+http://sedici.unlp.edu.ar/bitstream/handle/10915/62354/Documento_completo.pdf-PDFA.pdf?sequence=1 
+
+http://sistemasdistribuidosjosecastro.blogspot.com/2016/05/v-behaviorurldefaultvmlo.html 
+
+https://www.tamps.cinvestav.mx/~vjsosa/clases/sd/Sist_Operat_Dist_intro.pdf 
+
+https://www.fib.upc.edu/es/estudios/grados/grado-en-ingenieria-informatica/plan-de-estudios/asignaturas/SOAD 
